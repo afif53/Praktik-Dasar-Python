@@ -1,21 +1,11 @@
-🐍 Struktur Pemilihan (if) dalam Python
-Struktur pemilihan (if) digunakan untuk mengeksekusi blok kode tertentu berdasarkan kondisi yang terpenuhi. Python menggunakan indentasi untuk menentukan blok kode, dan tanda titik dua (:) wajib disertakan setelah setiap klausa kondisi.
+🐍 Struktur Pemilihan
+Dalam Python, struktur pemilihan dibuat menggunakan perintah "if". Klausa "else"
+harus ditulis lurus dengan perintah "if". Sebelum memulai blok baru perlu menyertakan
+tanda titik dua atau colon (:). Jika dalam satu blok terdapat lebih dari satu perintah
+yang akan dikerjakan, maka perintah kedua dan berikutnya harus ditulis lurus dengan
+perintah pertama. Untuk menangani banyak kondisi, kita perlu menggunakan klausa
+"elif" sebelum "else"
 
-1. Aturan Dasar Struktur Pemilihan
-Perintah if: Digunakan untuk memulai struktur pemilihan dan mengecek kondisi pertama.
-
-Tanda Titik Dua (:): Harus menyertai setiap perintah pemilihan (if, elif, else) sebelum memulai blok kode.
-
-Indentasi: Blok kode yang akan dieksekusi harus di-indentasi (ditulis menjorok ke kanan) secara konsisten di bawah klausa pemilihan.
-
-Klausa elif: Digunakan untuk menangani banyak kondisi tambahan, diletakkan setelah if dan sebelum else.
-
-Klausa else: Harus ditulis sejajar (lurus) dengan perintah if yang bersangkutan, dan menangani kasus di mana tidak ada kondisi sebelumnya yang terpenuhi.
-
-2. Contoh Kode Sederhana (Pemilihan if/else)
-Contoh ini menunjukkan bagaimana teks akan berubah berdasarkan nilai variabel versi.
-
-Python
 
 # Contoh:
 str = 'Pemrograman Python'
@@ -43,7 +33,6 @@ if versi[1] == '3':
 else:
     print('Versi tidak diketahui')
 
-# Contoh Output (akan bervariasi tergantung versi Python Anda):
 # Bahasa	: Python 3
 # Versi Python	: 3.11.
 4. Contoh Kalkulator Sederhana (if/elif/else)
