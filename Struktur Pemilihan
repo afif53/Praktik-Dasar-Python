@@ -1,0 +1,80 @@
+🐍 Struktur Pemilihan (if) dalam Python
+Struktur pemilihan (if) digunakan untuk mengeksekusi blok kode tertentu berdasarkan kondisi yang terpenuhi. Python menggunakan indentasi untuk menentukan blok kode, dan tanda titik dua (:) wajib disertakan setelah setiap klausa kondisi.
+
+1. Aturan Dasar Struktur Pemilihan
+Perintah if: Digunakan untuk memulai struktur pemilihan dan mengecek kondisi pertama.
+
+Tanda Titik Dua (:): Harus menyertai setiap perintah pemilihan (if, elif, else) sebelum memulai blok kode.
+
+Indentasi: Blok kode yang akan dieksekusi harus di-indentasi (ditulis menjorok ke kanan) secara konsisten di bawah klausa pemilihan.
+
+Klausa elif: Digunakan untuk menangani banyak kondisi tambahan, diletakkan setelah if dan sebelum else.
+
+Klausa else: Harus ditulis sejajar (lurus) dengan perintah if yang bersangkutan, dan menangani kasus di mana tidak ada kondisi sebelumnya yang terpenuhi.
+
+2. Contoh Kode Sederhana (Pemilihan if/else)
+Contoh ini menunjukkan bagaimana teks akan berubah berdasarkan nilai variabel versi.
+
+Python
+
+# Contoh:
+str = 'Pemrograman Python'
+versi = 3
+
+if versi == 3:
+    print(str + ' 3')
+else:
+    print(str)
+Output:
+
+Pemrograman Python 3
+3. Contoh Penggunaan Modul sys untuk Versi Python
+Contoh ini mengambil versi Python dari modul sys dan menggunakan pemilihan untuk menampilkan informasi.
+
+Python
+
+# Contoh
+import sys
+versi = sys.version
+
+if versi[1] == '3':
+    print('Bahasa\t: Python 3')
+    print('Versi Python\t: ' + versi[:5])
+else:
+    print('Versi tidak diketahui')
+
+# Contoh Output (akan bervariasi tergantung versi Python Anda):
+# Bahasa	: Python 3
+# Versi Python	: 3.11.
+4. Contoh Kalkulator Sederhana (if/elif/else)
+Ini adalah contoh yang menunjukkan penggunaan if, elif, dan else untuk operasi aritmatika berdasarkan input operator.
+
+Python
+
+# Contoh kode Python
+def main():
+    # Mengambil input dari pengguna
+    x = float(input('Masukkan bilangan pertama\t:'))
+    y = float(input('Masukkan bilangan kedua\t:'))
+    op = input('Masukkan operator (+,-,*,/)\t: ')
+
+    # Struktur Pemilihan
+    if op == '+':
+        print('%.2f + %.2f = %.2f' % (x, y, x+y))
+    elif op == '-':
+        print('%.2f - %.2f = %.2f' % (x, y, x-y))
+    elif op == '*':
+        print('%.2f * %.2f = %.2f' % (x, y, x*y))
+    elif op == '/':
+        print('%.2f / %.2f = %.2f' % (x, y, x/y))
+    else:
+        print('ERROR: Gunakan operator +,-,*,/')
+
+if __name__ == '__main__':
+    main()
+Contoh Input dan Output:
+
+Masukkan bilangan pertama	:1034
+Masukkan bilangan kedua	:273
+Masukkan operator (+,-,*,/)	:*
+1034.00 * 273.00 = 282282.00
