@@ -1,44 +1,46 @@
-# Praktik-Dasar-Python
-Modul 5 TYPE SET, STRUKTUR PEMILIHAN DAN PENGULANGAN
+🧠 Tipe Data set (Himpunan) di Python
+Tipe data set di Python adalah kumpulan item yang tidak berurutan (unordered) dan tidak memiliki duplikat (unindexed). Tipe ini sangat berguna untuk melakukan operasi himpunan matematis seperti gabungan, irisan, dan selisih.
 
-# >>>>>>>> KODE TYPE SET 1.
+1. Operasi Dasar Set (Mutator Methods)
+Bagian ini menunjukkan metode-metode yang digunakan untuk membuat, menambah (add, update), dan menghapus (remove, clear) elemen dari sebuah set.
+
+Python
+
 import sys
 
 def printElements(s, info):
     print(info)
     if len(s) == 0:
         print("Himpunan kosong\n")
-        # sys.exit(1) # Menghilangkan sys.exit(1) agar kode dapat dieksekusi sampai selesai
+        # sys.exit(1) # Baris ini dikomentari agar kode berjalan penuh
     for e in s:
         print(str(e) + ", ", end='')
     print("\n")
 
-# membuat himpunan
+# Membuat himpunan
 s = set([11, 22, 33, 44, 55])
 printElements(s, "Elemen awal:")
 
-# menambah anggota/elemen baru
-# menggunakan metode add()
+# Menambah anggota/elemen baru menggunakan metode add()
 s.add(66)
 s.add(77)
 printElements(s, "Setelah pemanggilan add():")
 
-# menambah anggota/elemen baru
-# menggunakan metode update()
+# Menambah anggota/elemen baru menggunakan metode update() (untuk menambahkan beberapa item)
 s.update([88, 99])
 printElements(s, "Setelah pemanggilan update():")
 
-# menghapus elemen dengan nilai 44
-# Catatan: Jika elemen tidak ada, .remove() akan memicu KeyError. 
-# Gunakan .discard() jika Anda tidak ingin error.
+# Menghapus elemen dengan nilai 44
+# Catatan: Gunakan .discard() jika elemen mungkin tidak ada dan Anda tidak ingin KeyError.
 s.remove(44)
 printElements(s, "Setelah pemanggilan remove():")
 
-# menghapus semua elemen
+# Menghapus semua elemen
 s.clear()
 printElements(s, "Setelah pemanggilan clear():")
+⚙️ Output Kode 1:
+Karena set tidak berurutan, urutan elemen dalam output mungkin berbeda-beda.
 
-### OUTPUT CELL ###
 Elemen awal:
 33, 11, 44, 22, 55, 
 
@@ -53,40 +55,42 @@ Setelah pemanggilan remove():
 
 Setelah pemanggilan clear():
 Himpunan kosong
+2. Operasi Himpunan Matematis
+Tipe set mendukung operator khusus yang memungkinkan kita melakukan operasi himpunan layaknya dalam matematika (Union, Intersection, Difference, Symmetric Difference).
 
-# >>>>>>>>>> KODE TYPE SET 2.
+Getty Images
+
+Python
+
 # Type set mendukung operasi-operasi himpunan seperti:
 
 x = set([1, 2, 3])
 y = set([3, 4])
 
 # 1. Union (Gabungan)
-# Operator: |
+# Operator: | (Menggabungkan semua elemen dari kedua set)
 a = x | y 
 print('Operasi union:')
 print(a) 
 
 # 2. Intersection (Irisan)
-# Operator: &
+# Operator: & (Mencari elemen yang ada di kedua set)
 b = x & y 
 print('Operasi intersection:')
 print(b) 
 
 # 3. Difference (Selisih)
-# Operator: -
-# x - y: Elemen di x yang TIDAK ada di y
+# Operator: - (Elemen di set pertama yang TIDAK ada di set kedua)
 c = x - y 
 print('Operasi difference:')
 print(c) 
 
 # 4. Symmetric Difference (Selisih Simetris)
-# Operator: ^ 
-# Elemen yang ada di x atau y, tapi TIDAK di keduanya (eksklusif)
+# Operator: ^ (Elemen yang ada di salah satu set, tetapi TIDAK di keduanya)
 d = x ^ y 
 print('Operasi symmetric difference:')
 print(d) 
-
-### OUTPUT CELL ###
+🔢 Output Kode 2:
 Operasi union:
 {1, 2, 3, 4}
 Operasi intersection:
