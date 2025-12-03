@@ -1,0 +1,74 @@
+>>>>> TYPE Frozenset 
+Bentuk umum frozenset:
+nama_constant_set = frozenset([nilai1, nilai2, nilai3,...])
+>>>CONTOH BENAR 
+fs=frozenset([1,2,3])
+print(fs)
+
+OUTPUT CELL
+frozenset({1, 2, 3})
+
+>>>>CONTOH YANG SENGAJA DISALAHKAN
+1.# frozenset tidak memiliki metode add()
+  fs = frozenset([1, 2, 3])
+  print(fs)
+  fs.add(4)
+
+  # Output Cell
+   frozenset({1, 2, 3})
+  ---------------------------------------------------------------------------
+  AttributeError                            Traceback (most recent call last)
+  /tmp/ipython-input-2633325500.py in <cell line: 0>()
+      2 fs = frozenset([1, 2, 3])
+      3 print(fs)
+  ----> 4 fs.add(4)
+
+  AttributeError: 'frozenset' object has no attribute 'add'
+
+2.# frozenset tidak memiliki metode update()
+  fs = frozenset([1, 2, 3])
+  print(fs)
+  fs.update([4, 5])
+
+  # OUTPUT CELL
+   frozenset({1, 2, 3})
+  ---------------------------------------------------------------------------
+  AttributeError                            Traceback (most recent call last)
+  /tmp/ipython-input-3465036763.py in <cell line: 0>()
+      2 fs = frozenset([1, 2, 3])
+      3 print(fs)
+  ----> 4 fs.update([4, 5])
+
+  AttributeError: 'frozenset' object has no attribute 'update'
+
+3.# frozenset tidak memiliki metode removal()
+  fs = frozenset([1, 2, 3])
+  print(fs)
+  fs.remove(3)
+
+  #OUTPUT CELL 
+   frozenset({1, 2, 3})
+  ---------------------------------------------------------------------------
+  AttributeError                            Traceback (most recent call last)
+  /tmp/ipython-input-3433577150.py in <cell line: 0>()
+      1 fs = frozenset([1, 2, 3])
+      2 print(fs)
+  ----> 3 fs.remove(3)
+
+  AttributeError: 'frozenset' object has no attribute 'remove'
+
+4.# frozenset tidak memiliki metode clear()
+  fs = frozenset([1, 2, 3])
+  print(fs)
+  fs.clear()
+
+  #OUPUT CELL 
+   frozenset({1, 2, 3})
+  ---------------------------------------------------------------------------
+  AttributeError                            Traceback (most recent call last)
+  /tmp/ipython-input-1170824899.py in <cell line: 0>()
+      2 fs = frozenset([1, 2, 3])
+      3 print(fs)
+  ----> 4 fs.clear()
+
+  AttributeError: 'frozenset' object has no attribute 'clear'
