@@ -5,53 +5,40 @@ berdasarkan indeks, gunakan fungsi range( ). Selain itu, fungsi range( ) berguna
 untuk membuat objek dari kelas range yang berisi kumpulan nilai dalam rentang
 tertentu.
 
-str = 'Pemrograman Python'
-versi = 3
+# Contoh program
+a = 'Python'
+# menelusuri semua karakter dalam string:
+for c in a:
+    print(c, end='')
+    
+output :Python
 
-if versi == 3:
-    print(str + ' 3')
-else:
-    print(str)
+b = ['Python', 'Ruby', 'Perl', 'PHP']
+# menelusuri semua karakter di dalam list:
+for e in b:
+    print(e)
 
-# Output:
-Pemrograman Python 3
+output: Python
+        Ruby
+        Perl
+        PHP
 
-Contoh 2: Memeriksa Versi Python dengan sysPython
-import sys
-versi = sys.version
+c = {'one':'satu', 'two':'dua', 'three':'tiga'}
+# menelusuri semua elemen di dalam dictionary:
+for key in c:
+    print('Arti "%s" adalah "%s"' % (key, c[key]))
 
-if versi[:1] == '3':
-    print('Bahasa\t\t: Python '3')
-    print('Versi Python\t: ' + versi[:5])
+output :Arti "one" adalah "satu"
+        Arti "two" adalah "dua"
+        Arti "three" adalah "tiga"
 
-# Output: 
-Bahasa	: Python 3
-Versi Python	: 3.11. 
+for i in range(6):
+    print(i, end='')
 
-Contoh 3: Kalkulator dengan if-elif-elsePython# Contoh kode Python
-def main():
-    x = float(input('Masukkan bilangan pertama\t:'))
-    y = float(input('Masukkan bilangan kedua\t:'))
-    op = input('Masukkan operator (+,-,*,/)\t: ')
+output : 012345
 
-    if op == '+':
-        print('%.2f + %.2f = %.2f' % (x, y, x+y))
-    elif op == '-':
-        print('%.2f - %.2f = %.2f' % (x, y, x-y))
-    elif op == '*':
-        print('%.2f * %.2f = %.2f' % (x, y, x*y))
-    elif op == '/':
-        # Asumsi y != 0 untuk menghindari ZeroDivisionError
-        print('%.2f / %.2f = %.2f' % (x, y, x/y))
-    else:
-        print('ERROR: Gunakan operator +,-,*,/')
+# range(10, 22, 2) artinya dari 10 sampai sebelum 22, langkah 2
+for i in range(10, 22, 2):
+    print("%d " % i, end='')
 
-if __name__ == '__main__':
-    main()
-
-# Output:
-Masukkan bilangan pertama	:1034
-Masukkan bilangan kedua	:273
-Masukkan operator (+,-,*,/)	:*
-1034.00 * 273.00 = 282282.00
-
+output :10 12 14 16 18 20 
