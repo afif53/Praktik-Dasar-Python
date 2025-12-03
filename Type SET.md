@@ -64,27 +64,27 @@ y = set([3, 4])
 # Operator: |
 a = x | y 
 print('Operasi union:')
-print(a) # Output: {1, 2, 3, 4}
+print(a) 
 
 # 2. Intersection (Irisan)
 # Operator: &
 b = x & y 
 print('Operasi intersection:')
-print(b) # Output: {3}
+print(b) 
 
 # 3. Difference (Selisih)
 # Operator: -
 # x - y: Elemen di x yang TIDAK ada di y
 c = x - y 
 print('Operasi difference:')
-print(c) # Output: {1, 2}
+print(c) 
 
 # 4. Symmetric Difference (Selisih Simetris)
 # Operator: ^ 
 # Elemen yang ada di x atau y, tapi TIDAK di keduanya (eksklusif)
 d = x ^ y 
 print('Operasi symmetric difference:')
-print(d) # Output: {1, 2, 4}
+print(d) 
 
 ### OUTPUT CELL ###
 Operasi union:
